@@ -1,0 +1,66 @@
+ 
+
+ .container{ 
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+ }  
+ .images{ 
+    
+    margin-bottom: 50px;
+
+}
+ .js-list{ 
+   
+    display: flex; 
+    flex-wrap: wrap;  
+    justify-content: center; 
+    margin: 0 auto;
+    list-style: none; 
+    padding: 20px 0px; 
+    background-color: cadetblue;  
+    border-radius: 20px;
+    
+ } 
+ .item{ 
+    position: relative;
+    width: 350px; 
+    margin: 15px; 
+    border-radius: 15px ;
+    padding: 10px 20px; 
+    background-color: chartreuse; 
+    text-align: center; 
+   
+   
+   
+ } 
+ .item-name{ 
+    display: block;
+    font-size: 28px; 
+    color: red;
+ } 
+ .itim-id{ 
+
+    display: block; 
+    position: absolute;  
+    padding: 5px 10px; 
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: #fff;
+    top: -3px;
+    right: -3px;
+
+ } 
+.item-num{ 
+
+    font-size: 22px; 
+    color: #fff;
+    font-weight: 600; 
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 5px 5px 5px 5px; 
+  
+
+}
