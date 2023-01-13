@@ -24,7 +24,7 @@
     border-radius: 20px;
     
  } 
- .item{ 
+ .list-item{ 
     position: relative;
     width: 350px; 
     margin: 15px; 
@@ -36,12 +36,12 @@
    
    
  } 
- .item-name{ 
+ .item-title{ 
     display: block;
     font-size: 28px; 
     color: red;
  } 
- .itim-id{ 
+ .itim-nambr{ 
 
     display: block; 
     position: absolute;  
@@ -53,7 +53,7 @@
     right: -3px;
 
  } 
-.item-num{ 
+.item-text{ 
 
     font-size: 22px; 
     color: #fff;
@@ -63,4 +63,11 @@
     border-radius: 5px 5px 5px 5px; 
   
 
+}
+.item-img{ 
+   display: block;
+   width: 150px;
+   height: 150px;
+   margin: 0 auto;
+   margin-bottom: 30px;
 }

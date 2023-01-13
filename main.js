@@ -1,42 +1,30 @@
  
 
- let elList = document.querySelector(".js-list"); 
- 
-
+ const elList = document.querySelector(".js-list"); 
+ const elTemple = document.querySelector(".js-templet").content;
+ const elFragment = document.createDocumentFragment();
   
 
 
- for (var item of pokemons) {
+ for (let item of pokemons) {
      
-    var newItem = document.createElement("li");
-    var newName = document.createElement("h3"); 
-    var newIdy = document.createElement("span"); 
-    var newImg = document.createElement("img");
-    var newNum = document.createElement("span"); 
-    var newType = document.createElement("p"); 
+    let newItem = elTemple.cloneNode(true);
+    
+    newItem.querySelector(".item-title").textContent = item.name;
+    newItem.querySelector(".itim-nambr").textContent = item.id;
+    newItem.querySelector(".item-img").src = item.img;
+    newItem.querySelector(".item-img").alt = item.name;
+    newItem.querySelector(".item-text").textContent = item.type;
+    newItem.querySelector(".item-typ").textContent = item.num;
 
-    newName.textContent = item.name; 
-    newIdy.textContent = item.id;
-    newImg.src = item.img;
-    newType.textContent = item.type;
-    newNum.textContent = item.num;
-     
-
-     
-    newItem.classList.add("item");
-    newName.classList.add("item-name");
-    newIdy.classList.add("itim-id");
-    newImg.classList.add("item-img");
-    newNum.classList.add("item-num");
-    newType.classList.add("item-type");
-     
-
-   newItem.append(newName, newIdy, newImg, newType, newNum);
-   elList.appendChild(newItem);
+    
    
+   elFragment.appendChild(newItem);
+   
+ } 
+ 
+ elList.appendChild(elFragment);
 
-
- }
 
 
 
