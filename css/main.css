@@ -70,4 +70,18 @@
    height: 150px;
    margin: 0 auto;
    margin-bottom: 30px;
+} 
+.item-candy_count{ 
+   
+   margin-top: 10px;
+   font-size: 18px;
+   font-weight: 500;
+   color: blue;
+
+} 
+.item-weaknesses{ 
+
+   font-size: 18px;
+   font-weight: 500;
+   color: darkred;
 }

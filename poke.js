@@ -1,5 +1,5 @@
 
-var pokemons = [
+const pokemons = [
 {
 	"id": 1,
 	"num": "001",
