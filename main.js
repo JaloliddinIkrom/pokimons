@@ -6,7 +6,6 @@
  const elInpWeightMin = document.querySelector(".js-poke-weight-min");
  const elInpWeightMax = document.querySelector(".js-poke-weight-max"); 
  const elSelectWeight = document.querySelector(".js-selct-weight");
- const elBukTitle = document.querySelector(".js-buk-title");
  const elList = document.querySelector(".js-list");
  const sortName = document.querySelector(".js-name-sort"); 
  const elTemple = document.querySelector(".js-templet").content;
@@ -71,25 +70,19 @@
   newItem.querySelector(".item-candy_count").textContent = item.candy_count;
   newItem.querySelector(".item-weaknesses").textContent = item.weaknesses.join(", ");
 
-  
- 
  elFragment.appendChild(newItem);
  
          });
 
        elList.appendChild(elFragment); 
    };
-    
-
-  //---------------------------------bukmark--------------------- 
-    
-
   
   // ------------------------------Forim addEventListener start-----------
 
  elForm.addEventListener("submit", function(evt){ 
-      
-    evt.preventDefault();
+  
+  evt.preventDefault();
+
    //-----------------------------------sort wight------------------ 
 
 
@@ -151,7 +144,7 @@
 
     const regexName = new RegExp(inpNameValue, "gi");
  
-       const nameSort = pokemons.filter(item => { 
+       const nameFiltir = pokemons.filter(item => { 
  
            const nameRegex =  String(item.name).match(regexName) && (elSelcetWeak.value == "all" || item.weaknesses.includes(elSelcetWeak.value)) && (elInpWeightMin.value == "" || item.candy_count >= elInpWeightMin.value) &&  (elInpWeightMax.value == "" || item.candy_count <= elInpWeightMax.value);
              
@@ -159,15 +152,14 @@
            return nameRegex;
        }); 
  
-       if(nameSort.length > 0){ 
+       if(nameFiltir.length > 0){ 
  
-         renderPoce(nameSort)
+         renderPoce(nameFiltir)
        }else{ 
  
          elList.innerHTML = "Movie not fount"
-       }
+       };
     
-
   //----------------------------------------sort name start----------------------------
      const sortNameArry = [];
      

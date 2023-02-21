@@ -23,11 +23,10 @@
 
 
       <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title js-buk-title" id="offcanvasBottomLabel"></h5>
+        <div class="offcanvas-header ">
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body small">
+        <div class="offcanvas-body small js-book-title">
           ...
         </div>
       </div> 
@@ -41,23 +40,23 @@
 
 
     <div class="poce-block"> 
-       <form class=" d-flex mb-3 js-form"> 
-          <input class="form-control js-name w-25 me-2" type="text" placeholder="sorch title"> 
-           <select class="js-select-weaknesses form-control w-25 me-2"> 
+       <form class=" d-flex flex-wrap  m-auto mb-3 js-form  "> 
+          <input class="form-control js-name w-25 me-2 mt-3" type="text" placeholder="sorch title"> 
+           <select class="js-select-weaknesses form-control w-25 me-2 mt-3"> 
               <option value="all">all</option>
            </select>
-          <input class="form-control js-poke-weight-min w-25 me-2" type="number" placeholder="poke weight min"> 
-          <input class="form-control js-poke-weight-max w-25 me-2" type="number" placeholder="poke weight max">
-            <select class="form-control js-selct-weight w-25 me-2"> 
+          <input class="form-control js-poke-weight-min w-25 me-2 mt-3" type="number" placeholder="poke weight min"> 
+          <input class="form-control js-poke-weight-max w-25 me-2 mt-3" type="number" placeholder="poke weight max">
+            <select class="form-control js-selct-weight w-25 me-2 mt-3"> 
               <option value="fat-thin">fat-thin</option>
               <option value="thin-fat">thin-fat</option>
             </select>
-           <select class="form-control js-name-sort  w-25 me-2"> 
+           <select class="form-control js-name-sort  w-25 me-2 mt-3"> 
             <option value="Aa-Zz">Aa-Zz</option>
             <option value="Zz-Aa">Zz-Aa</option>
            </select> 
 
-           <button class="js-btn w-10 btn btn-primary" type="submit">submit</button>
+           <button class="js-btn w-10 btn btn-primary mt-3" type="submit">submit</button>
        </form>
     </div>
       
