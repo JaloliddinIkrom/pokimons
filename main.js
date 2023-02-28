@@ -9,8 +9,8 @@
  const elList = document.querySelector(".js-list");
  const sortName = document.querySelector(".js-name-sort");  
  const bookMarkList = document.querySelector(".bookmarl-list");
- 
-   
+
+  
 
   //--------Pocemonsni aylanamiz weaknesses nomli arryni ham aylanib bo'sh arryga push qilib olamiz-----------// 
 
@@ -167,7 +167,7 @@
 
        if(regex.source != "(?:)" && regex){ 
 
-    newItem.querySelector(".item-title").innerHTML = item.name.replace(regex, `<mark class"">${ 
+    newItem.querySelector(".item-title").innerHTML = item.name.replace(regex, `<mark class="text-bg-warning rounded-2">${ 
            
       regex.source.toLowerCase()
 
@@ -203,7 +203,7 @@
 
      bookMarkList.innerHTML = "";
 
-      bookmark.forEach(item =>{
+      bookmark.forEach((item, index) =>{
      
         let newItem = elTemple.cloneNode(true); 
 
@@ -215,9 +215,9 @@
   newItem.querySelector(".item-text").textContent = item.weight;
   newItem.querySelector(".item-candy_count").textContent = item.candy_count;
   newItem.querySelector(".item-weaknesses").textContent = item.weaknesses.join(", ");    
-  newItem.querySelector(".temp-butten-dalet").dataset.bookmarkId = item.name; 
-  newItem.querySelector(".item-star").classList.add("visually-hidden");    
-  newItem.querySelector(".temp-butten-dalet").classList.remove("visually-hidden");   
+  newItem.querySelector(".temp-butten-dalet").dataset.bookmarkId = index; 
+  newItem.querySelector(".item-star").classList.add("d-none");    
+  newItem.querySelector(".temp-butten-dalet").classList.remove("d-none");   
 
   elFragment.appendChild(newItem);
  
@@ -239,7 +239,6 @@
             const addBookmark = pokemons.find(item => item.name === bookId);
 
               if(!bookArry.includes(addBookmark)){ 
-
                  
                    bookArry.push(addBookmark);
 
@@ -257,14 +256,12 @@
         
         const evtBookmark = evt.target.dataset.bookmarkId;
 
-        const daletBukmark = pokemons.find(item => item.name == evtBookmark);
-
-        bookArry.splice(daletBukmark, 1); 
+        bookArry.splice(evtBookmark, 1); 
 
         renderBokmark(bookArry, bookMarkList); 
 
       }
-    })
+    });
     
   // ------------------------------Forim addEventListener start-------------------------------------------------//
 

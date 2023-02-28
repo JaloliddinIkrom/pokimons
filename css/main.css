@@ -109,7 +109,7 @@
   margin: 10px 0; 
   
 }
-.item-star:hover{ 
+.item-star:active{ 
 
    background-image: url("../img/star-icon.svg");
 }
@@ -125,4 +125,10 @@
    padding: 0;
    margin: 0;
    list-style-type: none;
+} 
+.temp-butten-dalet{ 
+
+   color: red; 
+   font-size: 24px;
+   font-weight: 500;
 }
